@@ -6,9 +6,10 @@
 #      by: PyQt4 UI code generator 4.8.3
 #
 # WARNING! All changes made in this file will be lost!
+import subprocess
+import os
 
 from PyQt4 import QtCore, QtGui
-import subprocess
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -29,18 +30,19 @@ def casafofa():
 
 class Ui_bemvinda(object):
     def setupUi(self, bemvinda):
+        imagem_fofa = os.path.realpath('vidi.png')
         bemvinda.setObjectName(_fromUtf8("bemvinda"))
         bemvinda.setFocus()
         bemvinda.resize(398, 342)
         bemvinda.setMinimumSize(QtCore.QSize(398, 342))
         bemvinda.setMaximumSize(QtCore.QSize(398, 342))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(_fromUtf8("/home/vivi/vidi/vidi.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(_fromUtf8(imagem_fofa)), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         bemvinda.setWindowIcon(icon)
         bemvinda.setAutoFillBackground(False)
         self.graphicsView = QtGui.QGraphicsView(bemvinda)
         self.graphicsView.setGeometry(QtCore.QRect(70, 20, 256, 281))
-        self.graphicsView.setStyleSheet(_fromUtf8("border-image: url(/home/vivi/vidi/vidi.png);"))
+        self.graphicsView.setStyleSheet(_fromUtf8("border-image: url(%s);" % imagem_fofa))
         self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
         self.pushButton = QtGui.QPushButton(bemvinda)
         self.pushButton.setGeometry(QtCore.QRect(290, 310, 95, 27))
