@@ -30,7 +30,8 @@ def casafofa():
 
 class Ui_bemvinda(object):
     def setupUi(self, bemvinda):
-        imagem_fofa = os.path.realpath('vidi.png')
+        script_path = os.path.dirname(os.path.realpath(__file__))
+        imagem_fofa = os.path.join(script_path, 'vidi.png')
         bemvinda.setObjectName(_fromUtf8("bemvinda"))
         bemvinda.setFocus()
         bemvinda.resize(398, 342)
